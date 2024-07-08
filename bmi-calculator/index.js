@@ -1,6 +1,6 @@
 import readline from 'readline'
 
-const rl = readline.createInterface({
+const readLine = readline.createInterface({
     input: process.stdin,
     output: process.stdout
   });
@@ -24,11 +24,11 @@ const rl = readline.createInterface({
   }
   
   // Solicitar entrada del usuario para el peso
-  rl.question('Introduce tu peso en kilogramos: ', (weightInput) => {
+  readLine.question('Introduce tu peso en kilogramos: ', (weightInput) => {
     const weight = parseFloat(weightInput);
   
     // Solicitar entrada del usuario para la altura
-    rl.question('Introduce tu altura en metros: ', (heightInput) => {
+    readLine.question('Introduce tu altura en metros: ', (heightInput) => {
       const height = parseFloat(heightInput);
   
       // Calcular el BMI
@@ -42,6 +42,6 @@ const rl = readline.createInterface({
       console.log(`Interpretación: ${interpretation}`);
   
       // Cerrar la interfaz de readline
-      rl.close();
+      readLine.close();
     });
   });
